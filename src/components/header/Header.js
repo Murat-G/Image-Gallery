@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyledHeaderWrapper, StyledHeaderTitle } from './Header.style';
+import { StyledHeaderWrapper, StyledHeaderTitle,StyledLogo} from './Header.style';
 import { useHistory } from "react-router-dom";
-
+import dkpeakLogo from '../../asset/dkpeak-logo.png'
 
 const Header = () => {
 
@@ -11,15 +11,10 @@ const Header = () => {
         history.push("/");
     };
 
-    const handleAlbumClick = () => {
-        history.push("/album");
-    };
-
-
     return (
         <StyledHeaderWrapper>
+            <StyledLogo src={dkpeakLogo} />
             <StyledHeaderTitle onClick={handleHomeClick}> Home </StyledHeaderTitle>
-            <StyledHeaderTitle onClick={handleAlbumClick}> Album </StyledHeaderTitle>
         </StyledHeaderWrapper>
     )
 }

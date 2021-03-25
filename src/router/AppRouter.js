@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ImageStore from "../pages/album/ImageStore";
-import MyImages from "../pages/collection/MyImages";
+import MyImages from "../pages/MyImages";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 import  DataContextProvider from '../context/DataContext';
@@ -12,7 +11,6 @@ function AppRouter() {
       <Header />
       <Switch>
         <DataContextProvider>
-          <Route exact path="/album" component={ImageStore} />
           <Route exact path="/" component={MyImages} />
         </DataContextProvider>
       </Switch>
